@@ -12,11 +12,10 @@
     "claude",
     "llm"
   ],
-  "homepage": "https://github.com/lakehouse-42/lakehouse42",
+  "homepage": "https://lakehouse42.com/memory/docs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lakehouse-42/lakehouse42.git",
-    "directory": "packages/mcp-server"
+    "url": "https://github.com/lakehouse-42/mcp-server.git"
   },
   "license": "MIT",
   "author": "Lakehouse42 <hello@lakehouse42.com>",
