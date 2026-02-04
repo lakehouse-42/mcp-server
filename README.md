@@ -1,4 +1,4 @@
-# @lakehouse42/mcp-server
+# @lakehouse/mcp-server
 
 [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server for Lakehouse42.
 
@@ -13,7 +13,7 @@
 ## Quick Start
 
 ```bash
-LAKEHOUSE42_API_KEY=lh_xxx npx @lakehouse42/mcp-server
+LAKEHOUSE42_API_KEY=lh_xxx npx @lakehouse/mcp-server
 ```
 
 ### Claude Desktop
@@ -25,7 +25,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
   "mcpServers": {
     "lakehouse42": {
       "command": "npx",
-      "args": ["@lakehouse42/mcp-server"],
+      "args": ["@lakehouse/mcp-server"],
       "env": {
         "LAKEHOUSE42_API_KEY": "lh_your_api_key"
       }
@@ -94,7 +94,7 @@ Iceberg time-travel queries. Returns row count + 3 sample rows.
 For web deployments:
 
 ```typescript
-import { HttpTransport, ToolExecutor, ApiClient } from '@lakehouse42/mcp-server';
+import { HttpTransport, ToolExecutor, ApiClient } from '@lakehouse/mcp-server';
 
 const client = new ApiClient({ apiKey: 'lh_xxx', baseUrl: 'https://api.lakehouse42.com' });
 const transport = new HttpTransport({ toolExecutor: new ToolExecutor(client) });
@@ -116,7 +116,7 @@ http.createServer((req, res) => transport.handleRequest(req, res)).listen(3000);
 ## Programmatic Usage
 
 ```typescript
-import { createServer, searchTools, TAGGED_TOOLS } from '@lakehouse42/mcp-server';
+import { createServer, searchTools, TAGGED_TOOLS } from '@lakehouse/mcp-server';
 
 // Stdio server
 const server = createServer({ apiKey: 'lh_xxx' });

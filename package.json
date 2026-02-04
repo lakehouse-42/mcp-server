@@ -1,5 +1,5 @@
 {
-  "name": "@lakehouse42/mcp-server",
+  "name": "@lakehouse/mcp-server",
   "version": "0.1.0",
   "description": "Model Context Protocol (MCP) server for Lakehouse42 - exposes document search, time-travel queries, and RAG capabilities to AI assistants",
   "keywords": [

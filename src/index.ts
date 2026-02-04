@@ -6,7 +6,7 @@
  * time-travel queries, and RAG capabilities to AI assistants like Claude.
  *
  * Usage:
- *   npx @lakehouse42/mcp-server
+ *   npx @lakehouse/mcp-server
  *
  * Required environment variables:
  *   LAKEHOUSE42_API_KEY - Your Lakehouse42 API key
@@ -19,7 +19,7 @@
  *   "mcpServers": {
  *     "lakehouse42": {
  *       "command": "npx",
- *       "args": ["@lakehouse42/mcp-server"],
+ *       "args": ["@lakehouse/mcp-server"],
  *       "env": {
  *         "LAKEHOUSE42_API_KEY": "your-api-key"
  *       }
@@ -97,7 +97,7 @@ A Model Context Protocol server that connects AI assistants to your
 Lakehouse42 knowledge base for document search and RAG capabilities.
 
 USAGE:
-  npx @lakehouse42/mcp-server [OPTIONS]
+  npx @lakehouse/mcp-server [OPTIONS]
 
 OPTIONS:
   -h, --help      Show this help message
@@ -115,7 +115,7 @@ Add the following to your claude_desktop_config.json:
   "mcpServers": {
     "lakehouse42": {
       "command": "npx",
-      "args": ["@lakehouse42/mcp-server"],
+      "args": ["@lakehouse/mcp-server"],
       "env": {
         "LAKEHOUSE42_API_KEY": "your-api-key-here"
       }
@@ -145,7 +145,7 @@ TOOL TAGS:
 HTTP MODE:
   For Streamable HTTP transport, use the HttpTransport class:
 
-  import { HttpTransport, ToolExecutor, ApiClient } from '@lakehouse42/mcp-server';
+  import { HttpTransport, ToolExecutor, ApiClient } from '@lakehouse/mcp-server';
 
   const client = new ApiClient({ apiKey: 'your-key', baseUrl: 'https://api.lakehouse42.com' });
   const handler = new HttpTransport({ toolExecutor: new ToolExecutor(client) });
